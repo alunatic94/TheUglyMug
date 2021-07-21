@@ -2,14 +2,10 @@ body{
     margin:0;
     background-size:cover;
     background-position: 50% 50%;
-    background: url("img/pexels-pixabay-326311.jpg") fixed center; 
+    background: url("img/pexels-pixabay-326311.jpg") fixed center;
+    overflow-x: hidden; 
 }
-.big-image{
-    height: 100vh;
-    width:100%;
-    position: relative;
-    background-attachment: fixed;
-}
+
 
 .Menu-Logo{
     position:absolute;
@@ -29,20 +25,21 @@ body{
 }
 #logo{
     position: absolute;
-    left:42%;
+    left:38%;
+    top:2%;
     height: 100px;
     width:100px;
+    margin-bottom: 5px;
 }
 #logo img{
-    position: absolute;
-    border-radius: 50%;
-    margin: auto;
+    height:300px;
+    width:400px;
 }
 .nav-container{
     background:beige;
     position: absolute;
     left:15%;
-    top:80%;
+    top:92%;
     width:1000px;
     height: 50px;
     border-radius: 1.6em;
@@ -63,8 +60,8 @@ main{
 .menu-gallery{
     /* background:pink; */
     position: relative;
-    height: 575px;
-    width:1100px;
+    height: 505px;
+    width:1000px;
     margin: auto;
     flex-direction: row;
     display: flex;
@@ -74,6 +71,19 @@ main{
     /* background:red; */
     height:100%;
     width:400px;
+}
+#slider{
+    position: relative;
+    background:green;
+    margin-left: 10px;
+    height:250px;
+    width:300px;
+}
+#slider img{
+    position: relative;
+    height: 100%;
+    width:100%;
+    border:2px solid black;
 }
 .inner-box img{
     display: block;
@@ -109,9 +119,110 @@ main{
     object-fit: cover;
 }
 .our-story{
-    background:pink;
+    /* background:pink; */
     position: relative;
     height: 500px;
     width:1000px;
     margin: auto;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+}
+.our-story-content{
+    background:beige;
+    position: relative;
+    margin:0;
+    height:450px ;
+    width:600px;
+    border-radius: 1.6em;
+    opacity: 0.7;
+    flex-direction: column;
+    display: flex;
+    padding-right: 15px;
+    padding-left: 5px;
+}
+.our-story-content p{
+    position: relative;
+    margin-bottom: 3px;
+    font-size: 17px;
+    font-weight: 500;
+    font-family:sans-serif;
+    text-align: left;
+}
+#our-story-content-header{
+    position: relative;
+    float: left;
+    top:0;
+    font-size: 33px;
+    font-family: fantasy;
+    font-weight: bold;
+}
+#signature{
+    position: relative;
+    font-family:fantasy;
+    font-weight: 900;
+    margin-left: 50%;
+}
+.our-story-photo{
+    position: relative;
+    height: 500px;
+    width:450px;
+}
+.our-story-photo img{
+    display: block;
+    margin: auto;
+    width:90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 1.6em;
+}
+.carousel{
+    position: relative;
+    /* background:pink; */
+    left: 0;
+    width:100%;
+    height:250px ;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+.carousel__images{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    transform: translateX(0);
+    transition: transform 0.25;
+}
+.carousel img{
+    position: relative;
+    background:green;
+    margin-left: 10px;
+    max-height: 270px;
+    max-width: 475px;
+    z-index: -999;
+}
+.carousel button{
+    background: teal;
+    border:0;
+    border-radius: 50%;
+    color:white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 4rem;
+    opacity: 0.75;
+    position: absolute;
+    transition: opacity 0.25s;
+    width:4rem;
+    z-index: 1;
+}
+#previous{
+    left:5px;
+    background: pink;
+}
+#next{
+    right:5px;
+}
+.carousel button :hover{
+    opacity:0.5s ;
 }
