@@ -2,14 +2,10 @@ body{
     margin:0;
     background-size:cover;
     background-position: 50% 50%;
-    background: url("img/pexels-pixabay-326311.jpg") fixed center; 
+    background: url("img/pexels-pixabay-326311.jpg") fixed center;
+    overflow-x: hidden; 
 }
-.big-image{
-    height: 100vh;
-    width:100%;
-    position: relative;
-    background-attachment: fixed;
-}
+
 
 .Menu-Logo{
     position:absolute;
@@ -29,28 +25,94 @@ body{
 }
 #logo{
     position: absolute;
-    left:42%;
+    left:38%;
+    top:2%;
     height: 100px;
     width:100px;
+    margin-bottom: 5px;
 }
 #logo img{
-    position: absolute;
-    border-radius: 50%;
-    margin: auto;
+    height:300px;
+    width:400px;
 }
 .nav-container{
     background:beige;
     position: absolute;
     left:15%;
-    top:80%;
+    top:92%;
     width:1000px;
     height: 50px;
     border-radius: 1.6em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
+.nav-container button{
+    position: relative;
+    margin:auto;
+    background:transparent;
+    border:none;
+    outline: none;
+    height: 50px;
+    width:73px;
+    text-align: center;
+    text-decoration: none;
+    cursor:pointer;
+}
+.wrap{
+    background:red;
+    justify-content: space-around;
+}
+.navbar{
+    position:absolute;
+    width:70%;
+    height: 14%;
+    left:15%;
+    top:90%;
+    background:beige;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border:solid black;
+}
+
+.navbar a{
+    color:black;
+    text-decoration: none;
+    margin: auto;
+    font-size: 22px;
+}
+.navbar a:hover {
+    background-color: #000;
+    color:white;
+  }
+.dropdown-content {
+    background:beige;
+    display: none;
+    position: absolute;
+    left:53%;
+    top:101%;
+    min-width: 450px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    justify-content: center;
+    font-family: monospace;
+  } 
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+  }
+  .menu-item{
+      /* background:pink; */
+      justify-content: center;
+      margin: auto;
+  }
+.dropdown-content a:hover {background-color: #ddd}
+.show {display:block;}
 main{
-    /*Figure out how to get everything inside the main
-    tag to be centered
-    */
     /* background:blue; */
     position: absolute;
     height: 100%;
@@ -63,9 +125,10 @@ main{
 .menu-gallery{
     /* background:pink; */
     position: relative;
-    height: 575px;
-    width:1100px;
+    height: 505px;
+    width:1000px;
     margin: auto;
+    margin-top: 22px;
     flex-direction: row;
     display: flex;
     justify-content: space-evenly;
@@ -74,6 +137,19 @@ main{
     /* background:red; */
     height:100%;
     width:400px;
+}
+#slider{
+    position: relative;
+    background:green;
+    margin-left: 10px;
+    height:250px;
+    width:300px;
+}
+#slider img{
+    position: relative;
+    height: 100%;
+    width:100%;
+    border:2px solid black;
 }
 .inner-box img{
     display: block;
@@ -109,9 +185,117 @@ main{
     object-fit: cover;
 }
 .our-story{
-    background:pink;
+    /* background:pink; */
     position: relative;
     height: 500px;
     width:1000px;
     margin: auto;
+    margin-bottom: 23px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+}
+.our-story-content{
+    background:beige;
+    position: relative;
+    margin:0;
+    height:470px;
+    width:600px;
+    border-radius: 1.6em;
+    opacity: 0.7;
+    flex-direction: column;
+    display: flex;
+    padding-right: 15px;
+    padding-left: 5px;
+}
+.our-story-content p{
+    position: relative;
+    top:-33;
+    margin-bottom: 3px;
+    font-size: 17px;
+    font-weight: 500;
+    font-family:sans-serif;
+    text-align: left;
+}
+#our-story-content-header{
+    /* background:pink; */
+    height: 50px;
+    margin-bottom: 1px;
+    border-radius: 1.6em;
+    position: relative;
+    float: left;
+    top:-25;
+    font-size: 33px;
+    font-family:monospace;
+    font-weight: bold;
+    text-align: left;
+}
+#signature{
+    position: relative;
+    font-family:fantasy;
+    font-weight:bolder;
+    margin-left: 50%;
+}
+.our-story-photo{
+    position: relative;
+    height: 520px;
+    width:520px;
+}
+.our-story-photo img{
+    display: block;
+    margin: auto;
+    width:93%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 1.6em;
+}
+.carousel{
+    position: relative;
+    /* background:pink; */
+    left: 0;
+    width:100%;
+    height:250px ;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+.carousel__images{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    transform: translateX(0);
+    transition: transform 0.25s ease;
+}
+.carousel img{
+    position: relative;
+    background:green;
+    margin-left: 10px;
+    max-height: 220px;
+    max-width: 420px;
+    z-index: -999;
+}
+.carousel button{
+    background: lightslategray;
+    border:0;
+    border-radius: 50%;
+    color:white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 4rem;
+    opacity: 0.75;
+    position: absolute;
+    transition: opacity 0.25s;
+    width:4rem;
+    z-index: 1;
+}
+#previous{
+    left:5px;
+    background: lightslategray;
+}
+#next{
+    right:5px;
+}
+.carousel button :hover{
+    opacity:0.5s ;
 }
