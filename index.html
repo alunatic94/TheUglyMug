@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9d55cb6f9b.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -12,7 +13,18 @@
             <img src="img/logo-tan.png" alt="">
         </header>
         <nav>
-            <div class="nav-container">
+
+            <div class="wrapper">
+                <div class="navbar">
+                    <a href="#" class="a_parent">Home</a>
+                    <a href="#" class="a_parent"  onclick="myFunction()">Menu
+                        <div id="myDropdown"class="dropdown-content">
+                            <a href="#" class="menu-item">Coffee</a>
+                            <a href="#" class="menu-item">Coffee</a>
+                            <a href="#" class="menu-item">Coffee</a>
+                        </div>
+                    </a>
+                </div>               
             </div>
         </nav>
     </div>
@@ -44,7 +56,7 @@
         </section>
         <section class="our-story">
             <div class="our-story-content">
-                <!-- <h2 id="our-story-content-header">Our Story</h2> -->
+                <h2 id="our-story-content-header">Our Story</h2>
                 <p>The Ugly Mug Coffee House is a family own business. 
                     We are proud to say that our families have resided 
                     in our city of Burbank since the early 1950’s. 
@@ -69,7 +81,7 @@
                 <p>We can’t wait for you to visit us 
                     and meet The Ugly Mug Family!
                 </p>
-                <p id="signature">Steve and Emily</p>
+                <p id="signature">-Steve and Emily</p>
             </div>
             <div class="our-story-photo">
                 <img src="img/front.webp" alt="">
@@ -77,7 +89,9 @@
         </section>
         <section>
             <div class="carousel">
-                <button class="carousel_button previous" id="previous"></button>
+                <button class="carousel_button previous" id="previous">
+                    <i class="fas fa-angle-left" id="previous"></i>
+                </button>
                 <div class="carousel__images">
                     <img src="img/espresso.jpg" alt="">
                     <img src="img/gavina.jpg" alt="">
@@ -88,7 +102,9 @@
                     <img src="img/croissant.jpg" alt="">
                     <img src="img/green-juice.jpg" alt="">
                 </div>
-                <button class="carousel_button next" id="next"></button>
+                <button class="carousel_button next" id="next">
+                    <i class="fas fa-angle-right" id="next"></i>
+                </button>
             </div>
         </section>
     </main>

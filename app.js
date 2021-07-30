@@ -22,3 +22,9 @@ carouselButtons.forEach(button =>{
         console.log(imageIndex);
     });
 });
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+
